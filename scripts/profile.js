@@ -1,4 +1,4 @@
-const PROFILE_SRC = './scripts/json/profile.json'
+const PROFILE_SRC = BASE_URL+'scripts/json/profile.json'
 
 const LeProfile = (() => {
     const username = document.querySelector('.profile-username')
