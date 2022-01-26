@@ -1,3 +1,6 @@
+const BASE_URL = 'https://corazondiezzel.github.io/TipType.io/';
+
+
 const cActiveView = (()=>{
     iview = localStorage.getItem('iview')
     return {
@@ -18,10 +21,11 @@ async function fetchHtmlAsText(url) {
 }
 
 async function loadScripts(dview, lecall) {
+    let scriptURL = BASE_URL+"/scripts/"+dview+".js";
     var nscript = document.createElement("script")
     nscript.type = "text/javascript"
     nscript.id = nscript.view
-    nscript.src = "/scripts/"+dview+".js"
+    nscript.src = scriptURL;
     if(!document.head.contains(nscript)){
         nscript.onload = function(){
             console.log(dview+' loaded!')
@@ -31,7 +35,8 @@ async function loadScripts(dview, lecall) {
     }
 }
 async function unloadScript(dview,lecall){
-    fetch('scripts/json/meta.json')
+    let jsonURL = BASE_URL+'scripts/json/meta.json';
+    fetch(jsonURL)
     .then(res => res.json())
     .then(data =>{
         data.VIEWS.find(element => element.view == dview).scripts.forEach(element => {
@@ -42,7 +47,8 @@ async function unloadScript(dview,lecall){
 
 async function loadView(dview) {
     const contentDiv = document.getElementById("content")
-    contentDiv.innerHTML = await fetchHtmlAsText("views/"+dview+".view")
+    let loadURL = BASE_URL+"views/"+dview+".view"
+    contentDiv.innerHTML = await fetchHtmlAsText(loadURL)
 }
 
 async function fadeOutEffect(dnode) {
