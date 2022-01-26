@@ -8,6 +8,9 @@ const LeMenu = (() => {
                     nmenu.setAttribute('class', 'le-button bt-menu')
                     nmenu.style = 'background-color:' + element.background + ';';
                     nmenu.innerHTML = element.text
+                    nmenu.addEventListener('click',()=>{
+                        console.log("hell yeah!");
+                    })
                     document.querySelector('#base-menu').appendChild(nmenu);
                 }
             })
