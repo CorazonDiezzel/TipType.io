@@ -1,5 +1,5 @@
-const BASE_URL = 'https://corazondiezzel.github.io/TipType.io/';
-//const BASE_URL = '';
+const BASE_URL = 'https://corazondiezzel.github.io/TipType.io/'; //GIT
+//const BASE_URL = ''; //LOCAL
 
 
 const cActiveView = (()=>{
