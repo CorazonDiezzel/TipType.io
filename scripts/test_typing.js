@@ -1,4 +1,4 @@
-const QUOTE_SRC = './scripts/json/quotes.json'
+const QUOTE_SRC = BASE_URL+'scripts/json/quotes.json'
 
 const quoteDisplayE = document.getElementById('quoteDisplay')
 const quoteInputE = document.getElementById('quoteInput')
