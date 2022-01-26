@@ -1,0 +1,42 @@
+{"VIEWS":[
+    {
+        "text":"Home",
+        "view":"menu",
+        "background":"#03fc07",
+        "scripts":[
+            "menu"
+        ]
+    },
+    {
+        "text":"Pengenalan",
+        "view":"pengenalan",
+        "background":"#03fc07",
+        "scripts":[
+            "pengenalan"
+        ]
+    },
+    {
+        "text":"Teori Dasar",
+        "view":"teoridasar",
+        "background":"#03fcec",
+        "scripts":[
+            "teoridasar"
+        ]
+    },
+    {
+        "text":"Test Mengetik",
+        "view":"test_typing",
+        "background":"#6a00ff",
+        "scripts":[
+            "test_typing"
+        ]
+    },
+    {
+        "text":"Tentang",
+        "view":"tentang",
+        "background":"#f478ff",
+        "scripts":[
+            "tentang"
+        ]
+    }
+]}

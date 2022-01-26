@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+body, #content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin:0;
+    background-color:#1E0555;
+}
+
+body, quote-input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+
+.container{
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: .5em;
+    width: 700px;
+    max-width: 90%;
+}
+
+.timer{
+    position: absolute;
+    top: 2rem;
+    font-size:3rem;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.quote-display{
+    margin-bottom: 1rem;
+    margin-left: calc(1rem + 2px);
+    margin-right: calc(1rem + 2px);
+}
+
+.quote-input{
+    background-color: transparent;
+    border: 2px solid #95FF40;
+    outline: none;
+    width: 100%;
+    height: 8rem;
+    margin: auto;
+    resize: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+}
+
+.quote-input:focus{
+    border-color: #FFFFFF;
+}
+
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*------*/
+
+#base-menu{
+    position: absolute;
+    height:10vh;
+    top: 3rem;
+}
+
+.le-button{
+    padding: 1rem 4rem;
+    margin: 1rem;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 2em;
+    text-align: center;
+    color: aliceblue;
+    background-color: #82D230;
+}
+
+.le-button:hover{
+    background-color: white !important;
+    color: black;
+    cursor: pointer;
+}
+
+/* ----- Slider ----- */
+#logo {
+    max-width: 60%;
+    max-height: 20%;
+}
+
+#slides {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+#slides ul {
+    display: flex;
+    position: relative;
+    top: 30%;
+    margin: auto;
+    height: 250px;
+    list-style: none;
+}
+
+ .slide {
+    display: flex;
+    height: 250px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-family:lato, sans-serif;
+}
+
+.full-text, .judul {
+    margin: auto;
+    color: yellow;
+    font-family: consoles, sans-serif;
+    font-size: 60px;    
+}
