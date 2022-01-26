@@ -1,9 +1,0 @@
-<!--     <img id="logo" src="image/sekolahkoding.png" alt="gambar sekolah koding"> ini yang dimockup dibagian atas, logo sekolah koding biar keren ! -->
-    <div id="slides"> <!-- ini bukan container slider ya.. seperti yang di mockup, tapi cuma buat biar gampang ntar stylingnya -->
-        <ul> <!-- nah ini baru container slidenya, yang panjang, bakalan overflow  -->
-            <li class="slide"> <!-- ini bungkusan slidenya ntar, anggaplah ini slide 1 yang tadi udah digambar di mock up -->
-                    <p class="judul">Halo, sekolahkoding ! <br> <!-- ini konten alias isi dari slide yang bakalan geser-geser ntar -->
-                    </p>
-            </li>
-        </ul>
-    </div>

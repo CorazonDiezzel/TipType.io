@@ -1,10 +1,13 @@
-const PROFILE_SRC = BASE_URL+'scripts/json/profile.json'
+//const PROFILE_SRC = './scripts/json/profile.json'
 
 const LeProfile = (() => {
     const username = document.querySelector('.profile-username')
     const description = document.querySelector('.profile-description')
     const lastview = document.querySelector('.profile-lastview');
     return {
+        initialize:function(){
+
+        },
         setData: async function(data) {
             username.textContent = `${data.username}`
             description.textContent = `${data.description}`
@@ -12,13 +15,3 @@ const LeProfile = (() => {
         }
     }
 })();
-
-async function fetchProfile(){
-    return (await fetch(PROFILE_SRC)
-    .then((resp) => resp.json())
-    .then((data) => {
-    LeProfile.setData(data.profile[0])
-    }))
-}
-
-fetchProfile()
