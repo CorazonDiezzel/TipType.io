@@ -1,4 +1,5 @@
 const BASE_URL = 'https://corazondiezzel.github.io/TipType.io/';
+//const BASE_URL = '';
 
 
 const cActiveView = (()=>{
