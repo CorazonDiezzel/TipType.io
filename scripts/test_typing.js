@@ -9,6 +9,9 @@ const test_typing = (() => {
     var appendSeconds
     var Interval
 
+    var cpm
+    var wpm
+
     function startTimer() {
         clearInterval(Interval)
         Interval = setInterval(invokeTimer, 10)
@@ -52,10 +55,10 @@ const test_typing = (() => {
         }
 
     }
-    
-    async function iRenderQuote (meta) {
+
+    async function iRenderQuote(meta) {
         const quote = meta.getRandomQuote()
-        console.log("awdawd"+quote);
+        console.log("awdawd" + quote);
         quoteDisplayE.innerHTML = ''
         quote.split('').forEach(chara => {
             const charSpan = document.createElement('span')
@@ -101,7 +104,7 @@ const test_typing = (() => {
                 }
             })
             iRenderQuote(meta)
-        },renderQuotes:function(meta){
+        }, renderQuotes: function (meta) {
             iRenderQuote(meta);
         }
     }
