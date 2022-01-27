@@ -9,9 +9,6 @@ const test_typing = (() => {
     var appendSeconds
     var Interval
 
-    var cpm
-    var wpm
-
     function startTimer() {
         clearInterval(Interval)
         Interval = setInterval(invokeTimer, 10)
