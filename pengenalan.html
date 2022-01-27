@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <script type="application/javascript" src="scripts/script.js"></script>
-    <script type="application/javascript" src="scripts/menu.js"></script>
+    <script type="application/javascript" src="scripts/pengenalan.js"></script>
     <title>TipType</title>
 </head>
 
@@ -17,14 +17,19 @@
     <div class="profile-description" style="visibility: hidden;" hidden></div>
     <div class="profile-lastview" style="visibility: hidden;" hidden></div>
     <div id="content">
-        <div id="base-menu">
-            <!-- filled by script -->
+        <div id="slides">
+            <ul>
+                <li class="slide">
+                        <p class="judul">Halo, sekolahkoding ! <br>
+                        </p>
+                </li>
+            </ul>
         </div>
     </div>
-    
+
     <!-- Run scripts -->
     <script type="application/javascript">
-        LeMenu.initialize(META);
+        pengenalan.initialize(META);
     </script>
 </body>
 

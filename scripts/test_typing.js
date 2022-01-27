@@ -5,8 +5,8 @@ const test_typing = (() => {
 
     var seconds = 00
     var tens = 00
-    var appendTens = document.getElementById("tens")
-    var appendSeconds = document.getElementById("seconds")
+    var appendTens
+    var appendSeconds
     var Interval
 
     function startTimer() {
@@ -52,21 +52,28 @@ const test_typing = (() => {
         }
 
     }
-
-    function getRandomQuote() {
-        return fetch(QUOTE_SRC)
-            .then(response => response.json())
-            .then(data => {
-                let randQ = Math.floor(data.EL_QUOTES.length * Math.random());
-                return data.EL_QUOTES[randQ].content
-            })
+    
+    async function iRenderQuote (meta) {
+        const quote = meta.getRandomQuote()
+        console.log("awdawd"+quote);
+        quoteDisplayE.innerHTML = ''
+        quote.split('').forEach(chara => {
+            const charSpan = document.createElement('span')
+            charSpan.classList.add('correct')
+            charSpan.innerText = chara
+            quoteDisplayE.appendChild(charSpan)
+        });
+        quoteInputE.value = null
+        resetTimer()
     }
 
     return {
-        initialize: function () {
-            const quoteDisplayE = document.getElementById('quoteDisplay')
-            const quoteInputE = document.getElementById('quoteInput')
-            
+        initialize: function (meta) {
+            quoteDisplayE = document.getElementById('quoteDisplay')
+            quoteInputE = document.getElementById('quoteInput')
+            appendTens = document.getElementById("tens")
+            appendSeconds = document.getElementById("seconds")
+
             quoteInputE.addEventListener('input', () => {
                 const arrayQuote = quoteDisplayE.querySelectorAll('span')
                 const arrayValue = quoteInputE.value.split('')
@@ -90,26 +97,12 @@ const test_typing = (() => {
 
                 if (correct) {
                     stopTimer()
-                    renderQuote()
+                    iRenderQuote(meta)
                 }
             })
-            quoteInputE.addEventListener('input', () => {
-
-            })
-
-            async function renderQuote() {
-                const quote = await getRandomQuote()
-                console.log(quote);
-                quoteDisplayE.innerHTML = ''
-                quote.split('').forEach(chara => {
-                    const charSpan = document.createElement('span')
-                    charSpan.classList.add('correct')
-                    charSpan.innerText = chara
-                    quoteDisplayE.appendChild(charSpan)
-                });
-                quoteInputE.value = null
-                resetTimer()
-            }
+            iRenderQuote(meta)
+        },renderQuotes:function(meta){
+            iRenderQuote(meta);
         }
     }
 })();

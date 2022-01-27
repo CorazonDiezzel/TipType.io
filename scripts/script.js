@@ -9,7 +9,7 @@ const META = (() => {
     const VIEWS = [
         {
             "text": "Home",
-            "view": "menu",
+            "view": "index",
             "background": "#03fc07"
         },
         {
@@ -79,16 +79,20 @@ const META = (() => {
     ]
     return {
         getView: function (index) {
-            return VIEWS[index];
+            return VIEWS[index]
         },
         getViews: function () {
-            return VIEWS.map(v => v);
+            return VIEWS.map(v => v)
         },
         getQuote: function (index) {
-            return QUOTES.find(q => q.id == index);
+            return QUOTES.find(q => q.id == index)
+        },
+        getRandomQuote: function () {
+            let randQ = Math.floor(QUOTES.length * Math.random())
+            return QUOTES[randQ].content
         },
         getProfile: function () {
-            return PROFILE.map(v => v);
+            return PROFILE.map(v => v)
         }
     }
 })();

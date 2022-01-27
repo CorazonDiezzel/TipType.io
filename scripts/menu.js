@@ -9,7 +9,7 @@ const LeMenu = (() => {
                     nmenu.style = 'background-color:' + element.background + ';';
                     nmenu.innerHTML = element.text
                     nmenu.addEventListener('click',()=>{
-                        console.log("hell yeah!");
+                        location.href = '';
                     })
                     document.querySelector('#base-menu').appendChild(nmenu);
                 }
